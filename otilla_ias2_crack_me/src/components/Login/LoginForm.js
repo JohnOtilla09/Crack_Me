@@ -88,7 +88,7 @@ const LoginForm = (props) => {
           )}
           <div
             className={`${styles.check} ${
-              passwordState.isValid === false && props.error ? styles.invalid : styles.normal
+              passwordState.isValid === false || props.error ? styles.invalid : ''
             }`}
           >
             <label className={valid}>Password</label>
@@ -100,7 +100,7 @@ const LoginForm = (props) => {
               value={passwordState.value}
               autoComplete="false"
             />
-            {passwordState.isValid === false && props.error && <p>Password must contain a-z, 0-9, and symboles</p>}
+            {passwordState.isValid === false || props.error ? <p>Password must contain a-z, 0-9, and symboles</p> : ''}
           </div>
           <Button onClick={props.onClick} disabled={isAttempt}>
             {isAttempt === true ? counter : props.isLoading ? 'Login...' : 'Login'}

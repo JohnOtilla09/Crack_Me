@@ -94,7 +94,8 @@ form {
 }
 
 .check p {
-    font-size: 12px;
+    margin: 0;
+    font-size: 1rem;
     color: #E1685D;
     transition: .5s;
 }
