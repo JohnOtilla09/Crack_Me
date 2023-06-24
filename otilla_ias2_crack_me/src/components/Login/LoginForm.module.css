@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Bebas+Neue&family=Berkshire+Swash&family=Comforter&family=My+Soul&family=Poppins:wght@300&family=Roboto:ital,wght@1,700&family=Rubik+Moonrocks&family=Rubik+Wet+Paint&family=Tapestry&family=Tinos&family=Ubuntu:wght@300;500&display=swap');
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: -50%;
+    padding: 35px 60px;
+    background: #222;
+    z-index: 1;
+    gap: 30px;
+}
+
+.box h1 {
+  font-size: 70px;
+  font-family: 'Comforter', cursive;
+  background-image: linear-gradient(96.2deg, rgb(255, 230, 112) 10.4%, rgb(255, 100, 100) 43.8%, rgb(0, 93, 219) 105.8%);
+  -webkit-background-clip: text; /* For browser compatibility */
+  -webkit-text-fill-color: transparent; /* For browser compatibility */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.check {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.check input {
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-indent: 1rem;
+    width: 24rem;
+    height: 4rem;
+    outline: none;
+    box-shadow: none;
+    border: 0.1rem solid #ffff;
+    color: #fff;
+    letter-spacing: 0.2em;
+    transition: 0.5s;
+    background: transparent;
+}
+
+.check label {
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    top: -18%;
+    left: 5%;
+    background: #222;
+    pointer-events: none;
+    color: #8f8f8f;
+    letter-spacing: 0.2em;
+    padding: 0 10px;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.error {
+    background: #F8D7DA;
+    height: 4rem;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    border: 1px solid #E1685D;
+    border-radius: 5px;
+}
+
+.check.invalid label {
+    color: #E1685D;
+}
+
+.check.invalid input {
+    border: 0.1rem solid #E1685D;
+    border-bottom-width: 0.3rem;
+    border-right-width: 0.3rem;
+  }
+
+.check.normal label {
+    color: #8f8f8f;
+}
+
+.check.normal input {
+    border: 0.1rem solid #ffff;
+}
+
+.check p {
+    font-size: 12px;
+    color: #E1685D;
+    transition: .5s;
+}
+
+label.valid {
+    color: #5DB8F3;
+    transition: 0.5s;
+}
+
+input.valid:focus {
+    border-bottom: 0.3rem solid;
+    border-image: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+    border-image-slice: 1;
+    border-right: 0.3rem solid;
+    background-clip: padding-box;
+}

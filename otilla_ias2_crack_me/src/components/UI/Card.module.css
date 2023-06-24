@@ -1,0 +1,55 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 20%;
+    padding: 5px 5px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.login::before {
+    content: '';
+    position: absolute;
+    top: -85%;
+    left: -40%;
+    height: 500px;
+    width: 420px;
+    background: linear-gradient(50deg, transparent,
+    transparent, #45f3ff, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.login::after {
+    content: '';
+    position: absolute;
+    top: -85%;
+    left: -40%;
+    height: 500px;
+    width: 420px;
+    background: linear-gradient(50deg, transparent,
+    transparent, #45f3ff, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@media (max-width: 750px) {
+    .login {
+        left: 0;
+    }
+  }
